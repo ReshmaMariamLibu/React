@@ -1,5 +1,7 @@
 // import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 
 const Home = () => {
     const navigate = useNavigate();
@@ -9,10 +11,18 @@ const Home = () => {
     };
 
     return (
-        <div>
+        <Box 
+            display="flex" 
+            flexDirection="column" 
+            alignItems="center" 
+            justifyContent="center" 
+            height="100vh"
+        >
             <h1>Welcome to Dog World</h1>
-            <button onClick={navigateToDash}>Click Me!</button>
-        </div>
+            <Button onClick={navigateToDash} variant="contained">
+                Click Me!!
+            </Button>
+        </Box>
     );
 };
 

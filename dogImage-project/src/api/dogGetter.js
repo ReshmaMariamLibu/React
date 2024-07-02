@@ -1,11 +1,12 @@
 
 import axios from 'axios';
 
+const url = import.meta.env.VITE_API_URL
 
    export const fetchDogImage =  () => {
 
         return(   
-            axios.get('https://dog.ceo/api/breeds/image/random').then(
+            axios.get(url).then(
                 (res)=>{ 
                     return res;
                 },

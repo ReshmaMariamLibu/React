@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { dogImage } from '../store/dog.js';
+import Button from '@mui/material/Button';
 
 const DogImage = () => {
 
@@ -18,7 +19,8 @@ const DogImage = () => {
         <div>
            { console.log(dogData.message)   }
            {console.log(dogData.length)}
-            <button onClick={() => dispatch(dogImage())}>Click here</button>
+            {/* <button onClick={() => dispatch(dogImage())}>Click here</button> */}
+            <Button onClick={() => dispatch(dogImage())}variant="contained">Click here!!!!</Button>
         </div>
         {isStatus === 'failed' ? (
             <div>404 error</div>
